@@ -27,5 +27,13 @@ public class HomeController {
 		
 		return ResponseEntity.ok().body(map);
 	}
+	
+	@GetMapping("/check")
+	public ResponseEntity<?> check(){
+		Map<String, String> map = new HashMap<>();
+		map.put("check", "can't use");
+		
+		return ResponseEntity.ok().body(map);
+	}
 
 }
