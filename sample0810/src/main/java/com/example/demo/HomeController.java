@@ -19,5 +19,13 @@ public class HomeController {
 		
 		return ResponseEntity.ok().body(map);
 	}
+	
+	@GetMapping("/health")
+	public ResponseEntity<?> health(){
+		Map<String, String> map = new HashMap<>();
+		map.put("status", "good");
+		
+		return ResponseEntity.ok().body(map);
+	}
 
 }
